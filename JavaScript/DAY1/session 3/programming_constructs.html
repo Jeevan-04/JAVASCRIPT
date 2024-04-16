@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>Programming Constructs</title>
+        <style>
+            input{
+                font-size:30px;
+                text-decoration-color: cornflowerblue;
+                background-color: cornsilk;
+                border-radius:25px;
+            }
+        </style>
+        <script>
+            function fun1()
+            {
+                alert("Switchcase");
+                var score=parseInt(prompt("Enter the feedback score"));
+                var remarks;
+                switch(score)
+                {
+                    case 5:
+                        remarks="Excellent";
+                        break;
+                    case 4:
+                        remarks="Very Good";
+                        break;
+                    case 3:
+                        remarks="Good";
+                        break;
+                    case 2:
+                        remarks="Average";
+                        break;
+                    case 1:
+                        remarks="Below Average";
+                        break;
+                    default:
+                        remarks="Incorrect Input";
+                }
+                alert(remarks);
+            }
+    
+            function fun2()
+            {
+                alert("For Loop")
+                for(let num=0, score=90;num<=10;num++,score-=10)
+                {
+                    console.log("Jeevan-> "+num+"<br>");
+                    console.log("My score-> "+score+"<br>");
+                    console.log("<hr>");
+                }
+            }
+    
+            function fun3()
+            {
+                alert("Do While loop")
+                var ctr=0;
+                do
+                {
+                    document.write("CODE<br>");
+                    document.write("EAT<br>");
+                    document.write("SLEEP<br>");
+                    document.write("<hr>");
+                    ctr++
+                }while(ctr<5)
+            }
+    
+            function fun4()
+            {
+                alert("While loop")
+                let num=10;
+                while(num>=-5)
+                {
+                    document.write("Jeevan-> "+num)
+                    document.write("<br>")
+                    num-=2;
+                }
+            }
+    
+            function fun5()
+            {
+                alert("Foreach loop")
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" onclick="fun1()" value="Switchcase">
+        <br>
+        <input type="button" onclick="fun2()" value="For loop">
+        <br>
+        <input type="button" onclick="fun3()" value="Do While loop">
+        <br>
+        <input type="button" onclick="fun4()" value="While loop">
+        <br>
+        <input type="button" onclick="fun5()" value="Foreach loop">
+        <br>
+    </body>
+</html>

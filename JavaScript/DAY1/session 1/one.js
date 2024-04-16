@@ -1,0 +1,2 @@
+alert('hii')
+alert('bye')
