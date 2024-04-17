@@ -1,0 +1,63 @@
+<html>
+    <style>
+        input{
+            font-size:2em;
+            border-radius:15px;
+            background-color: aliceblue;
+            color:cornflowerblue;
+        }
+    </style>
+    <body>
+        <script>
+            function arr1()
+            {
+                alert("Array method 1");
+                arr=[12,true,"Mumbai","Navi Mumbai", "Kharghar"];
+                alert(arr.length);
+                var ctr=0;
+                while(ctr<arr.length)
+                {
+                    alert(arr[ctr])
+                    ctr++
+                }
+                ans=arr.reverse();
+                alert(ans.toString());
+                alert(ans[3]);
+            }
+            function arr2()
+            {
+                alert("Array method 2")
+                var data= new Array(10);
+                document.write("<hr>");
+                data.push("Mumbai");
+                document.write("The Length of the array"+data.length);
+                document.write("<hr>");
+                document.write(data.toString());
+                data.pop();
+                data.pop();
+                document.write("<hr>");
+                document.write("The array after pop");
+                document.write(data.toString());
+
+            }
+            function arr3()
+            {
+                alert("Array method 3")
+                let data= new Array();
+                data[0]="Monday";
+                data[1]="Tuesday";
+                data.push("Wednesday");
+                data.push("Thursday");
+                for(x in data)
+                {
+                    document.write("<p style='color:red;font-size:2em;'>");
+                    document.write(x+"->"+ data[x]);
+                    document.write("</p>");
+                }
+            }
+        </script>
+        <input type="button" onclick="arr1()" value="Array 1">
+        <input type="button" onclick="arr2()" value="Array 2">
+        <input type="button" onclick="arr3()" value="Array 3">
+    </body>
+</html>

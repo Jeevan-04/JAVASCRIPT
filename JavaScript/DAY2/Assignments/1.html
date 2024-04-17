@@ -1,0 +1,43 @@
+<html>
+    <body>
+        <script>
+            var num1=parseInt(prompt("Enter the First number"));
+            var num2=parseInt(prompt("Enter the Second number"));
+            function addition(num1, num2)
+            {
+                var ans=num1+num2;
+                alert(ans);
+            }
+            function subtraction(num1, num2)
+            {
+                var ans=num1-num2;
+                alert(ans);
+            }
+            function multiplication(num1, num2)
+            {
+                var ans=num1*num2;
+                alert(ans);
+            }
+            function division(num1, num2)
+            {
+                var ans=num1/num2;
+                alert(ans);
+            }
+            function mod(num1, num2)
+            {
+                var ans=num1%num2;
+                alert(ans);
+            }
+        </script>
+        <input type="button" onclick="addition()" value="add">
+        <br>
+        <input type="button" onclick="subtraction()" value="sub">
+        <br>
+        <input type="button" onclick="multiplication()" value="mul">
+        <br>
+        <input type="button" onclick="division()" value="div">
+        <br>
+        <input type="button" onclick="mod()" value="mod">
+        <br>
+    </body>
+</html>

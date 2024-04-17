@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Objects</title>
+    </head>
+    <style>
+        input{
+            font-size:2em;
+            background-color: white;
+            border-radius:20px;
+        }
+    </style>
+    <body style="color:blue;font-size:2em;font-style: oblique;">
+        <script>
+            function example1()
+            {
+                alert("Object 1")
+                var obj=
+                {
+                    Model: "Real me",
+                    Price: 8000,
+                    CamResolution:"48px"
+                }
+                    alert(obj.Model);
+                obj.Model="Jio"
+                alert(obj["Model"])
+                alert(obj.Price)
+                alert(obj["CamResolution"])
+            }
+            function example2()
+            {
+                alert("Object 2")
+                var obj= {instrumentName:"Guitar" , price:10000}
+                alert(obj.instrumentName);
+                alert(obj["price"]);
+                obj.type="acoustic";
+                obj.material="wood";
+                alert(obj.material);
+                alert(obj.type);
+                delete obj.price
+                alert(obj.price)
+            }
+            function example3()
+            {
+                alert("Object 3")
+                var objSong={SongName:"SaReGaMaPa", SongType:"Classical",Raganame:"Tilang"}
+                for(x in objSong)
+                {
+                    alert(x)
+                    alert(objSong[x]);
+                }
+            }
+            function example4()
+            {
+                alert("Object 4")
+                var laptops=
+                [{LaptopName:"HCL",Price:33000},
+                {LaptopName:"HP",Price:43000},
+                {LaptopName:"DELL",Price:23000},
+                {LaptopName:"Macbook",Price:60000}]
+                document.write("<hr>")
+                document.write(laptops)
+                document.write("<hr>")
+                document.write(laptops[1]);
+                document.write("<hr>");
+                document.write("The Laptops are as mentioned <br>");
+                for(x in laptops)
+                {
+                    for(y in laptops[x])
+                        document.write(laptops[x][y]+"<br>")
+
+                }
+            }
+        </script>
+        <input type="button" onclick="example1()" value="Object1"><br>
+        <input type="button" onclick="example2()" value="Object2"><br>
+        <input type="button" onclick="example3()" value="Object3"><br>
+        <input type="button" onclick="example4()" value="Object4"><br>
+    </body>
+</html>
