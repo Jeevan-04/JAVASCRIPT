@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Payments</title>
+    </head>
+    <body>
+        <script>
+            function upi(mfrom, mto, amount, fun1)
+            {
+                if(mfrom==null||mto==null||amount==null)
+                {
+                    fun1("ERROR")
+                }
+                else{
+                    fun1("SUCCESS")
+                }
+            }
+            function bhimupi(m1, m2, amt)
+            {
+                upi(m1, m2, amt, function(a)
+                    {
+                        if(a.toLowerCase()=="success")
+                            document.write("<p style='color:green'>Payment Done</p>")
+                        else
+                            if(a.toLowerCase()=="error")
+                                document.write("<p style='color:red'>ERROR</p>")
+                            else
+                                document.write("UNKNOWN")
+                    });
+            }
+            function gpay(m1, m2, amt)
+            {
+                upi(m1, m2, amt, function(a)
+                    {
+                        if(a.toLowerCase()=="success")
+                            document.write("<img src='https://zeuxinnovation.com/wp-content/uploads/2023/04/maximising-user-satisfaction-1.jpg' style='background-size:cover;height:100%;width:90%;margin:0px 5%'>")
+                        else
+                            if(a.toLowerCase()=="error")
+                                document.write("<img src='https://cdn.dribbble.com/users/399488/screenshots/3077134/payment_declined_1x.jpg?resize=400x0' style='background-size:cover;height:100%;width:90%;margin:0px 5%'>")
+                            else
+                                document.write("UNKNOWN")
+                    });
+            }
+            function Phonepe(m1, m2, amt)
+            {
+                upi(m1, m2, amt, function(a)
+                    {
+                        if(a.toLowerCase()=="success")
+                            document.write("&#8377;"+amt+"/ paid")
+                        else
+                            if(a.toLowerCase()=="error")
+                                document.write("&#8377;"+amt+"/ Not  paid")
+                            else
+                                document.write("UNKNOWN")
+                    });
+            }
+        </script>
+        <input type="button" onclick="bhimupi(null, null, 9000)" value="BHIM NULL">
+        <br>
+        <input type="button" onclick="bhimupi(1234567890, 9876543201, 20000)" value="BHIM 20000">
+        <br>
+        <input type="button" onclick="gpay(null, null, 9000)" value="GPAY NULL">
+        <br>
+        <input type="button" onclick="gpay(1234567890, 9876543201, 20000)" value="GPAY 20000">
+        <br>
+        <input type="button" onclick="Phonepe(null, null, 9000)" value="Phonepe NULL">
+        <br>
+        <input type="button" onclick="Phonepe(1234567890, 9876543201, 20000)" value="Phonepe 20000">
+        <br>
+    </body>
+</html>

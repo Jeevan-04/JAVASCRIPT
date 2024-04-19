@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <div><table id="d1" border="1px" style="border-collapse: collapse;">
+            <tr><th>sr.no</th>
+                <th>Name</th>
+                <th>Mail id</th>
+            </tr>
+        </table></div>
+        <script>
+
+                let arr=["Jeevan Naidu","Chaitanya Dalvi","Gaurang Jadhav", "Chandan Dhumale", "Tanmay Gharat"];
+                var y=document.getElementById("d1")
+                var y=document.createElement("tr");
+                for(let i=0;i<arr.length;i++)
+                {
+                    var x=(arr[i]).split(' ');
+                    var mystyle="color:cornflowerblue;background-color:cornsilk;font-size:2em;";
+                    d1.setAttribute("style",mystyle);
+                    var j=document.createElement("tr");
+                    y.innerHTML=x[0] + " " + x[1] + " -> " + x[0] + "." + x[1] + "@isu.ac.in";
+                    var x=(arr[i]).split(' ');
+                }
+        </script>
+    </body>
+</html>

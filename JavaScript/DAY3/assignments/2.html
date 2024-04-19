@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment</title>
+</head>
+<body>
+    <p id="display"></p>
+
+    <script>
+        let arr = [2, 5, 8, 10, 15];
+
+        function check(num) {
+            if (num % 2 == 0)
+                return "even";
+            else
+                return "odd";
+        }
+
+        let display = document.getElementById('display');
+
+        display.innerHTML += "<strong>Numbers in the array:</strong> ";
+
+        for (let i = 0; i < arr.length; i++) 
+            display.innerHTML += arr[i] + " is " + check(arr[i]) + ", ";
+
+        
+        let random = Math.floor(Math.random() * 20) + 1;
+        let message = "";
+        if (random > 10)
+            message = "The random number (" + random + ") is greater than 10.";
+        else
+            message = "The random number (" + random + ") is less than or equal to 10.";
+        
+        display.innerHTML += "<br><br><strong>Random Number Example:</strong> " + message;
+    </script>
+</body>
+</html>

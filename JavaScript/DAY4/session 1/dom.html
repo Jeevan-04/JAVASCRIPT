@@ -1,0 +1,60 @@
+<html>
+    <body>
+        <script>
+            function domA()
+            {
+                alert("DOM A");
+                // var x= document.getElementById("t1").getAttribute("value");
+                // var x=prompt("color ")
+                x=t1.value;
+                let y="color:"+x;
+                document.getElementById("t1").setAttribute("style", y)
+            }
+            function domB()
+            {
+                alert("DOM B");
+                x=t1.value;
+                document.getElementById("t1").style.backgroundColor=x;
+                document.getElementById("t1").style.fontSize="2em";
+                document.getElementById("t1").style.width="50%";
+                document.getElementById("t1").style.borderRadius="50px";
+                document.getElementById("t1").style.color="white";
+            }
+            function domC()
+            {
+                alert("DOM C");
+                var mystyle="color:green;background-color:yellow;font-size:2em;border-radius:50px;";
+                t1.setAttribute("style",mystyle);
+            }
+            function domD()
+            {
+                alert("DOM D");
+                var x=document.createElement("h1");
+                document.getElementById("d1").appendChild(x);
+                x.innerHTML="Knowldge with humility is like a diamond on gold";
+            }
+            // function domE()
+            // {
+            //     alert("DOM E");
+            //     var d=document.createElement("div");
+            //     var y="color:red;width:fit-content;height:fit-content;background-color: yellow;"
+            //     d.setAttribute("style",y);
+            //     document.body.appendChild(d)
+            //     x.innerHTML="Knowldge with humility is like a diamond on gold";
+            // }
+        </script>
+        <input type="text" value="" id="t1">
+        <br>
+        <input type="button" onclick="domA()" value="Dom A">
+        <br>
+        <input type="button" onclick="domB()" value="Dom B">
+        <br>
+        <input type="button" onclick="domC()" value="Dom C">
+        <br>
+        <input type="button" onclick="domD()" value="Dom D">
+        <br>
+        <input type="button" onclick="domE()" value="Dom E">
+        <br>
+        <div id="d1" style="color:red;width:fit-content;height:fit-content;background-color: yellow;"></div>
+    </body>
+</html>

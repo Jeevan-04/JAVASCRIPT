@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <div><ol id="d1"></ol></div>
+        <script>
+            let arr=["Jeevan Naidu","Chaitanya Dalvi","Gaurang Jadhav", "Chandan Dhumale", "Tanmay Gharat"];
+            for(let i=0;i<arr.length;i++)
+            {
+                var x=(arr[i]).split(' ');
+                var z=document.createElement("li");
+                var mystyle="color:cornflowerblue;background-color:cornsilk;font-size:2em;";
+                d1.setAttribute("style",mystyle);
+                z.innerHTML=x[0] + " " + x[1] + " -> " + x[0] + "." + x[1] + "@isu.ac.in";
+                document.getElementById("d1").appendChild(z);
+            }
+        </script>
+    </body>
+</html>
