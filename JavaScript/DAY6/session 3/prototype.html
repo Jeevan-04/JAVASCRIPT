@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script language="javascript">
+            function person()
+            {
+                this.firstname="Jeevan"
+                this.lastname="naidu";
+            }
+            x=new person();
+            y=x;
+            z=new person();
+
+            alert(x.firstname)
+            alert(y.firstname)
+            alert(z.firstname)
+
+            person.prototype.salary=5000;
+
+            alert("x: "+x.salary)
+            alert("y: "+y.salary)
+            alert("z: "+z.salary)
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <input id="password" type="text">
+        <button onclick="checkPassword()">Check Password</button>
+        <div id="output" align="center"></div>
+        
+        <script>
+            function checkPassword() {
+                let password = document.getElementById("password").value;
+                var uppercase = /[A-Z]/;
+                var lowercase = /[a-z]/;
+                var digits = /[0-9]/;
+                var special = /[$|_]/;
+                
+                if (uppercase.test(password) && lowercase.test(password) && digits.test(password) && special.test(password) && password.length >= 8) {
+                    alert("TRUE");
+                    var outputDiv = document.getElementById("output");
+                    outputDiv.innerHTML = "WELCOME TO HTML WORLD !";
+                    outputDiv.style.fontSize = "4em";
+                } else {
+                    alert("FALSE");
+                    document.getElementById("output").innerHTML = "Not a strong Password";
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <script>
+            class mobileApp
+            {
+                constructor(a)
+                {
+                    this.appName=a;
+                }
+                static Appfeatures()
+                {
+                    alert("Mobile Features")
+                }
+            }
+            var obj=new mobileApp("smartPhone")
+            mobileApp.Appfeatures();
+            alert("Staticdemo");
+            obj.Appfeatures(); //this will not execute
+            //because static methods cannot be invoked 
+        </script>
+        <p id="p1">Output</p>
+    </body>
+</html>

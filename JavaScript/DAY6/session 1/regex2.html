@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Regular Expression: Jeevan</title>
+        <script>
+            function reg1()
+            {
+                alert("Regular Expression 1");
+                var x=t1.value;
+                var patt=/\b[ABCD]/i
+                var cities=["Ahemdabad","Pune","Mumbai", "Banalore", "Chennai", "Pondicherry", "Daman"];
+                ans=0;
+                for(ctr=0;ctr<cities.length;ctr++)
+                {
+                    if(patt.test(cities[ctr]))
+                        ans=ans+1;
+                }
+                document.write("The number of cities found with the pattern is "+ans);
+            }
+            function reg2()
+            {
+                alert("Regular Expression 2");
+                let empid=t1.value;
+                var patt=/E\d{3}/;
+                if(empid.length==4 && patt.test(empid))
+                {
+                    x=document.getElementById("s1")
+                    x.style="background-color:green";
+                    x.innerHTML="Valid Employee id";
+                }
+                else
+                {
+                    document.getElementById("s1").innerHTML="InValid Employee id";
+                }
+            }
+            function reg3()
+            {
+                alert("Regular Expression 3");
+                var patt=/mumbai/ig;
+                var txt =t1.value;
+                if(patt.test(txt))
+                {
+                    txt=txt.toUpperCase();
+                    document.getElementById("s1").innerHTML=txt;
+                }
+                else
+                {
+                    document.getElementById("s1").innerHTML=txt;
+                }
+            }
+            function reg4()
+            {
+                alert("Regular Expression 4");
+                var patt=/tamil nadu/ig;
+                var txt =t1.value;
+                if(patt.test(txt))
+                {
+                    txt=txt.replace(patt,"chennai");
+                    document.getElementById("s1").innerHTML=txt;
+                }
+                else
+                {
+                    document.getElementById("s1").innerHTML=txt;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        ENTER THE TEXT: <input type="text" id="t1"><span id="s1"></span>
+        <br>
+        <button onclick="reg1()" style="font-size: 4em;">&#128512;</button>
+        <br>
+        <br>
+        <button onclick="reg2()" style="font-size: 4em;">&#128528;</button>
+        <br>
+        <br>
+        <button onclick="reg3()" style="font-size: 4em;">&#128558;</button>
+        <br>
+        <br>
+        <button onclick="reg4()" style="font-size: 4em;">&#128566;</button>
+    </body>
+</html>
