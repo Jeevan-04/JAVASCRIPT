@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <script>
+            function add(a, b, c)
+            {
+                ans=a+b+c
+                return ans;
+            }
+            function display()
+            {
+                var arr2=acceptdata();
+                var result=add(arr2[0],arr2[1],arr2[2]);
+                document.write("The answer is "+result);
+            }
+            function acceptdata()
+            {
+                var x=parseInt(prompt("Enter the first Number"));
+                var y=parseInt(prompt("Enter the second Number"));
+                var z=parseInt(prompt("Enter the third Number"));
+                var arr1=[x,y,z];
+                return arr1;
+            }
+        </script>
+        <input type="button" onclick="display()" value="FUNCTIONS!!!">
+    </body>
+</html>

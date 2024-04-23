@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Math Operations</title>
+<script>
+
+function factorial(n) {
+    if (n < 0) {
+        return "Factorial not defined for negative numbers";
+    } else if (n === 0 || n === 1) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+function square(n) {
+    return n * n;
+}
+
+function arithmetic(a, b, operation) {
+    switch (operation) {
+        case 'add':
+            return a + b;
+        case 'subtract':
+            return a - b;
+        case 'multiply':
+            return a * b;
+        case 'divide':
+            if (b === 0) {
+                return "Cannot divide by zero";
+            }
+            return a / b;
+        default:
+            return "Invalid operation";
+    }
+}
+
+function handleFactorial() {
+    const num = parseInt(document.getElementById('factorialInput').value);
+    const result = factorial(num);
+    document.getElementById('factorialResult').innerText = 'Result: ' + result;
+}
+function handleSquare() {
+    const num = parseInt(document.getElementById('squareInput')..value);
+    const result = square(num);
+    document.getElementById('squareResult').innerText = 'Result: ' + result;
+}
+
+
+function handleArithmetic(operation) {
+    const num1 = parseInt(document.getElementById('num1').value);
+    const num2 = parseInt(document.getElementById('num2').value);
+    const result = arithmetic(num1, num2, operation);
+    document.getElementById('arithmeticResult').innerText = 'Result: ' + result;
+}
+</script>
+</head>
+<body>
+<h2>Math Operations</h2>
+
+<div>
+    <h3>Factorial</h3>
+    <input type="number" id="factorialInput" placeholder="Enter a number">
+    <button onclick="handleFactorial()">Calculate Factorial</button>
+    <p id="factorialResult"></p>
+</div>
+
+<!-- Square -->
+<div>
+    <h3>Square</h3>
+    <input type="number" id="squareInput" placeholder="Enter a number">
+    <button onclick="handleSquare()">Calculate Square</button>
+    <p id="squareResult"></p>
+</div>
+
+<div>
+    <h3>Arithmetic Operations</h3>
+    <input type="number" id="num1" placeholder="Number 1">
+    <input type="number" id="num2" placeholder="Number 2">
+    <button onclick="handleArithmetic('add')">Add</button>
+    <button onclick="handleArithmetic('subtract')">Subtract</button>
+    <button onclick="handleArithmetic('multiply')">Multiply</button>
+    <button onclick="handleArithmetic('divide')">Divide</button>
+    <p id="arithmeticResult"></p>
+</div>
+
+</body>
+</html>

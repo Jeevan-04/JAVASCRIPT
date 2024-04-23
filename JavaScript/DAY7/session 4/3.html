@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <script>
+            window.onload=function()
+            {
+                var arr=["mobile","laptop","charger","headphone"];
+                for (ctr=0;ctr<arr.length;ctr++)
+                {
+                    var x=document.createElement("option");
+                    x.innerHTML=arr[ctr];
+                    document.getElementById("products").appendChild(x);
+                }
+            }
+            function addtoCart()
+            {
+                var data=products.value;
+                alert(data);
+                var nodex=document.createElement("option");
+                nodex.innerHTML=data;
+                document.getElementById("cart").appendChild(nodex);
+            }
+        </script>
+        <select id="products">
+        </select>
+        <select id="cart">
+        </select>
+    </body>
+</html>

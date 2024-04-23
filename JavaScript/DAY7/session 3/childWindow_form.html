@@ -1,0 +1,54 @@
+<html>
+    <body>
+        <script>
+            function openNewWindow(msg) {
+                mywindow = window.open('', 'variable', 'width=700,height=400');
+                mywindow.document.write(msg);
+            }
+        
+            function look() {
+                let firstName = document.getElementById("t1").value;
+                let lastName = document.getElementById("t2").value;
+                let DateofBirth = document.getElementById("t3").value;
+                let Phone = document.getElementById("t4").value;
+        
+                var check1 = /[A-Za-z]/;
+                var check3 = /[0-9]/;
+        
+                if (!check1.test(firstName)) {
+                    openNewWindow("Incorrect First Name <br>");
+                    return;
+                }
+                if (!check1.test(lastName)) {
+                    openNewWindow("Incorrect Last Name <br>");
+                    return;
+                }
+                if (Phone.length !== 10 || !check3.test(Phone)) {
+                    openNewWindow("Incorrect Phone <br>");
+                    return;
+                }
+        
+                openNewWindow("First Name: " + firstName + "<br><br>" + "Last Name: " + lastName + "<br><br>" + "Date of Birth: " + DateofBirth + "<br><br>" + "Phone: " + Phone + "<br><br>");
+            }
+        </script>        
+        <form>
+            First Name:
+            <input type="text" placeholder="First Name" id="t1">
+            <br>
+            <br>
+            Last Name:
+            <input type="text" placeholder="Last Name" id="t2">
+            <br>
+            <br>
+            Date of birth:
+            <input type="date" id="t3">
+            <br>
+            <br>
+            Phone Number:
+            <input type="text" id="t4">
+            <br>
+            <br>
+            <button onclick="look()">SUBMIT</button>
+        </form>
+    </body>
+</html>
