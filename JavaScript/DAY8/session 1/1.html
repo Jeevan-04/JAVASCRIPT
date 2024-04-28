@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <script>
+            alert("hiii")
+            function getData()
+            {
+                var xhr=new XMLHttpRequest();
+
+                xhr.open("get","",true)
+                    xhr.onload=function()
+                    {
+                        var ans= xhr.responseText;
+                        document.getElementById("d1").innerHTML=ans
+                    }
+            }
+        </script>
+        <div id="d1" style="color:red;font-size:2em;"></div>
+        <input type="button" onclick="getData()" value="get">
+    </body>
+</html>
