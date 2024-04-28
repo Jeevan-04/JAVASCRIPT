@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <script>
+            function fun1()
+            {
+                document.cookie="fname=jeevan, expires=Thu, 02 May 2024 11:00:000 UTC;"
+                alert(document.cookie.length);
+                document.getElementById("d1").innerHTML=document.cookie;
+            }
+        </script>
+        <input type="button" onclick="fun1()" value="fun1">
+        <div id="d1">
+
+        </div>
+    </body>
+</html>
